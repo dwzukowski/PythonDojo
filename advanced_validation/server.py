@@ -14,7 +14,8 @@ def index():
 def submit():
     if len(request.form['email']) < 1:
         flash("Email cannot be blank!")
-        # else if email doesn't match regular expression display an "invalid email address" message
+    elif not EMAIL_REGEX.match(request.form['email']):
+        flash("Invalid email address")
     else:
         flash("Success!")
     return redirect('/')
