@@ -1,0 +1,16 @@
+<html>
+    <head>
+       <title>Dojo Survey</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+   </head>
+<body>
+<div class="wrapper">
+
+ <h1>Dojo Survey</h1>
+ <p>   {{session['location']}} </p>
+ <p>   {{session['name']}} </p>
+ <p>   {{session['language']}}</p>
+ <p>   {{session['info']}} </p>
+</div>
+</body>
+</html>
